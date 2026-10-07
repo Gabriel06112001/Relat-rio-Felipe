@@ -10,7 +10,6 @@
     :root {
       --bala:   #3B82F6;
       --balaguer: #F97316;
-      --gosel:  #10B981;
       --bg:     #0F172A;
       --card:   #1E293B;
       --card2:  #273549;
@@ -84,7 +83,6 @@
     }
     .company-card.bala::before     { background: var(--bala); }
     .company-card.balaguer::before { background: var(--balaguer); }
-    .company-card.gosel::before    { background: var(--gosel); }
 
     .card-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; }
     .card-title  { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
@@ -96,7 +94,6 @@
     }
     .bala-dot     { background: var(--bala); }
     .balaguer-dot { background: var(--balaguer); }
-    .gosel-dot    { background: var(--gosel); }
 
     .card-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     .metric { }
@@ -243,7 +240,7 @@
     </div>
   </div>
   <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-    <span class="date-badge">📅 Período: set/2024 – mar/2026</span>
+    <span class="date-badge">📅 Período: set/2024 – set/2026</span>
     <button class="btn-export" onclick="exportarExcel()">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
@@ -272,22 +269,22 @@
     <div class="card-metrics">
       <div class="metric">
         <div class="metric-label">Total Faturado</div>
-        <div class="metric-value">R$ 3.435.350</div>
+        <div class="metric-value">R$ 5.088.650</div>
       </div>
       <div class="metric">
         <div class="metric-label">Total Pago</div>
-        <div class="metric-value text-success">R$ 3.159.800</div>
+        <div class="metric-value text-danger">R$ 5.163.100</div>
       </div>
       <div class="metric">
         <div class="metric-label">Diferença</div>
-        <div class="metric-value text-warning">R$ 275.550</div>
+        <div class="metric-value text-danger">-R$ 74.450</div>
       </div>
       <div class="metric">
         <div class="metric-label">Notas Emitidas</div>
-        <div class="metric-value">18</div>
+        <div class="metric-value">24</div>
       </div>
     </div>
-    <span class="diff-pill pos">⚠ Pendente R$ 275.550</span>
+    <span class="diff-pill neg">↑ Pago a maior R$ 74.450</span>
   </div>
 
   <!-- BALAGUER REPRES -->
@@ -303,53 +300,22 @@
     <div class="card-metrics">
       <div class="metric">
         <div class="metric-label">Total Faturado</div>
-        <div class="metric-value">R$ 3.793.350</div>
+        <div class="metric-value">R$ 5.446.650</div>
       </div>
       <div class="metric">
         <div class="metric-label">Total Pago</div>
-        <div class="metric-value text-warning">R$ 3.334.100</div>
+        <div class="metric-value text-warning">R$ 4.344.450</div>
       </div>
       <div class="metric">
         <div class="metric-label">Diferença</div>
-        <div class="metric-value text-warning">R$ 459.250</div>
+        <div class="metric-value text-warning">R$ 1.102.200</div>
       </div>
       <div class="metric">
         <div class="metric-label">Notas Emitidas</div>
-        <div class="metric-value">20</div>
+        <div class="metric-value">26</div>
       </div>
     </div>
-    <span class="diff-pill pos">⚠ Pendente R$ 459.250</span>
-  </div>
-
-  <!-- GO SEL -->
-  <div class="company-card gosel">
-    <div class="card-header">
-      <div>
-        <div class="card-title">Consultoria 03</div>
-        <div class="card-name">Go Sel</div>
-        <div class="card-rep">Anderson Salemme</div>
-      </div>
-      <div class="color-dot gosel-dot"></div>
-    </div>
-    <div class="card-metrics">
-      <div class="metric">
-        <div class="metric-label">Total Faturado</div>
-        <div class="metric-value">R$ 1.611.922</div>
-      </div>
-      <div class="metric">
-        <div class="metric-label">Total Pago</div>
-        <div class="metric-value text-danger">R$ 1.853.172</div>
-      </div>
-      <div class="metric">
-        <div class="metric-label">Diferença</div>
-        <div class="metric-value text-danger">-R$ 241.250</div>
-      </div>
-      <div class="metric">
-        <div class="metric-label">Notas Emitidas</div>
-        <div class="metric-value">18</div>
-      </div>
-    </div>
-    <span class="diff-pill neg">↑ Pago a maior R$ 241.250</span>
+    <span class="diff-pill pos">⚠ Pendente R$ 1.102.200</span>
   </div>
 
 </div>
@@ -360,11 +326,10 @@
   <!-- Gráfico de Barras Mensal -->
   <div class="chart-card">
     <div class="chart-title">Faturamento Mensal por Consultoria</div>
-    <div class="chart-subtitle">Valores em R$ — set/2024 a mar/2026</div>
+    <div class="chart-subtitle">Valores em R$ — set/2024 a set/2026</div>
     <div class="legend">
       <div class="legend-item"><div class="legend-line" style="background:var(--bala)"></div> Bala Consultoria</div>
       <div class="legend-item"><div class="legend-line" style="background:var(--balaguer)"></div> Balaguer Repres</div>
-      <div class="legend-item"><div class="legend-line" style="background:var(--gosel)"></div> Go Sel</div>
     </div>
     <div class="chart-wrap" style="height:300px">
       <canvas id="barChart"></canvas>
@@ -374,7 +339,7 @@
   <!-- Pizza: proporção total -->
   <div class="chart-card">
     <div class="chart-title">Participação no Faturamento Total</div>
-    <div class="chart-subtitle">Proporção sobre R$ 8.840.622</div>
+    <div class="chart-subtitle">Proporção sobre R$ 10.535.300</div>
     <div class="chart-wrap" style="height:300px; display:flex; align-items:center; justify-content:center;">
       <canvas id="donutChart"></canvas>
     </div>
@@ -413,23 +378,23 @@
   <div class="kpi-grid-4">
     <div style="background:var(--card2);border-radius:12px;padding:14px;border-left:3px solid #3B82F6">
       <div style="font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">Faturado — Bala</div>
-      <div style="font-size:1rem;font-weight:700;color:#3B82F6">R$ 3.435.350</div>
-      <div style="font-size:0.7rem;color:var(--warning);margin-top:4px">⚠ 92% recebido</div>
+      <div style="font-size:1rem;font-weight:700;color:#3B82F6">R$ 5.088.650</div>
+      <div style="font-size:0.7rem;color:var(--danger);margin-top:4px">↑ 101,5% recebido</div>
     </div>
     <div style="background:var(--card2);border-radius:12px;padding:14px;border-left:3px solid #F97316">
       <div style="font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">Faturado — Balaguer</div>
-      <div style="font-size:1rem;font-weight:700;color:#F97316">R$ 3.793.350</div>
-      <div style="font-size:0.7rem;color:var(--warning);margin-top:4px">⚠ 87,9% recebido</div>
+      <div style="font-size:1rem;font-weight:700;color:#F97316">R$ 5.446.650</div>
+      <div style="font-size:0.7rem;color:var(--warning);margin-top:4px">⚠ 79,8% recebido</div>
     </div>
     <div style="background:var(--card2);border-radius:12px;padding:14px;border-left:3px solid var(--warning)">
       <div style="font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">Dif. no faturamento</div>
-      <div style="font-size:1rem;font-weight:700;color:var(--warning)">+R$ 82.450</div>
-      <div style="font-size:0.7rem;color:var(--muted);margin-top:4px">Balaguer acima (dez/24 Bala s/mov)</div>
+      <div style="font-size:1rem;font-weight:700;color:var(--warning)">+R$ 358.000</div>
+      <div style="font-size:0.7rem;color:var(--muted);margin-top:4px">Balaguer acima (dez/24 s/mov + ajuste dez/25)</div>
     </div>
     <div style="background:var(--card2);border-radius:12px;padding:14px;border-left:3px solid var(--danger)">
       <div style="font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">Em aberto — Balaguer</div>
-      <div style="font-size:1rem;font-weight:700;color:var(--danger)">R$ 459.250</div>
-      <div style="font-size:0.7rem;color:var(--muted);margin-top:4px">Notas #20 e #21 · fev-mar/26</div>
+      <div style="font-size:1rem;font-weight:700;color:var(--danger)">R$ 1.102.200</div>
+      <div style="font-size:0.7rem;color:var(--muted);margin-top:4px">Notas #24 a #27 · jun-set/26</div>
     </div>
   </div>
 
@@ -450,17 +415,22 @@
 
       <div style="background:rgba(148,163,184,0.06);border:1px solid rgba(148,163,184,0.18);border-radius:10px;padding:12px">
         <div style="font-size:0.72rem;font-weight:700;color:var(--muted);margin-bottom:4px">ℹ dez/25 — Ajuste contábil Balaguer</div>
-        <div style="font-size:0.74rem;color:var(--muted);line-height:1.6">Balaguer notas 17+18: <strong style="color:#F97316">R$ 345.700</strong><br>Bala nota 15: <strong style="color:#3B82F6">R$ 183.700</strong><br>Diferença: <strong style="color:var(--muted)">+R$ 162.000</strong><br><span style="font-size:0.7rem;font-style:italic">Ajuste contábil — não considerado como retirada neste relatório</span></div>
+        <div style="font-size:0.74rem;color:var(--muted);line-height:1.6">Balaguer notas 17+18: <strong style="color:#F97316">R$ 345.700</strong><br>Bala nota 15: <strong style="color:#3B82F6">R$ 183.700</strong><br>Diferença: <strong style="color:var(--muted)">+R$ 162.000</strong><br><span style="font-size:0.7rem;font-style:italic">Nota de acerto (NF 18, paga em 17/12/2025) do valor que Felipe P. Física devia à Click referente ao aluguel da Madeira Express — não é retirada de consultoria</span></div>
       </div>
 
       <div style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:10px;padding:12px">
-        <div style="font-size:0.72rem;font-weight:700;color:var(--danger);margin-bottom:4px">⏳ fev/26 — Nota #20 em aberto</div>
-        <div style="font-size:0.74rem;color:var(--muted);line-height:1.6">Faturado mas não quitado:<br><strong style="color:var(--danger)">R$ 183.700,00</strong></div>
+        <div style="font-size:0.72rem;font-weight:700;color:var(--danger);margin-bottom:4px">⏳ jun-set/26 — Notas em aberto só na Balaguer</div>
+        <div style="font-size:0.74rem;color:var(--muted);line-height:1.6">Balaguer: <strong style="color:var(--danger)">R$ 1.102.200,00</strong> (4 × R$ 275.550,00) — sem pagamento desde 28/07/2026<br>Bala: <strong style="color:var(--success)">quitadas</strong> — jun e jul por parcela, ago e set por adiantamento</div>
+      </div>
+
+      <div style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:10px;padding:12px">
+        <div style="font-size:0.72rem;font-weight:700;color:var(--danger);margin-bottom:4px">↑ jul-set/26 — Adiantamentos à Bala</div>
+        <div style="font-size:0.74rem;color:var(--muted);line-height:1.6">7 × R$ 50.000 (30/07 a 30/09): <strong style="color:#3B82F6">R$ 350.000</strong><br>1 × R$ 275.550 (30/09): <strong style="color:#3B82F6">R$ 275.550</strong><br>Total: <strong style="color:#3B82F6">R$ 625.550</strong> · notas ago+set: R$ 551.100<br>Excedente: <strong style="color:var(--danger)">R$ 74.450</strong><br><span style="font-size:0.7rem;font-style:italic">Bala recebeu R$ 818.650 a mais que a Balaguer no acumulado (R$ 980.650 desconsiderando a NF 18 de acerto)</span></div>
       </div>
 
       <div style="background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.15);border-radius:10px;padding:10px 12px">
         <div style="font-size:0.72rem;font-weight:700;color:var(--muted);margin-bottom:4px">ℹ Ticket médio</div>
-        <div style="font-size:0.74rem;color:var(--muted);line-height:1.6">Bala: <strong style="color:#3B82F6">R$ 190.853/nota</strong> (18 notas)<br>Balaguer: <strong style="color:#F97316">R$ 185.147/nota</strong> (19 notas)</div>
+        <div style="font-size:0.74rem;color:var(--muted);line-height:1.6">Bala: <strong style="color:#3B82F6">R$ 212.027/nota</strong> (24 notas)<br>Balaguer: <strong style="color:#F97316">R$ 209.487/nota</strong> (26 notas)</div>
       </div>
 
     </div>
@@ -480,33 +450,33 @@
         <div style="display:flex;flex-direction:column;gap:9px">
           <div style="display:flex;justify-content:space-between">
             <span style="font-size:0.72rem;color:var(--muted)">Total Faturado</span>
-            <span style="font-size:0.8rem;font-weight:700">R$ 3.435.350</span>
+            <span style="font-size:0.8rem;font-weight:700">R$ 5.088.650</span>
           </div>
           <div style="display:flex;justify-content:space-between">
             <span style="font-size:0.72rem;color:var(--muted)">Total Pago</span>
-            <span style="font-size:0.8rem;font-weight:700;color:var(--success)">R$ 3.159.800</span>
+            <span style="font-size:0.8rem;font-weight:700;color:var(--danger)">R$ 5.163.100</span>
           </div>
           <div style="display:flex;justify-content:space-between">
-            <span style="font-size:0.72rem;color:var(--muted)">Pendente</span>
-            <span style="font-size:0.8rem;font-weight:700;color:var(--warning)">R$ 275.550</span>
+            <span style="font-size:0.72rem;color:var(--muted)">Pago a maior</span>
+            <span style="font-size:0.8rem;font-weight:700;color:var(--danger)">R$ 74.450</span>
           </div>
           <div style="margin-top:2px">
             <div style="display:flex;justify-content:space-between;margin-bottom:5px">
               <span style="font-size:0.7rem;color:var(--muted)">% Recebido</span>
-              <span style="font-size:0.75rem;font-weight:700;color:var(--warning)">92%</span>
+              <span style="font-size:0.75rem;font-weight:700;color:var(--danger)">101,5%</span>
             </div>
             <div style="background:rgba(255,255,255,0.07);border-radius:99px;height:7px;overflow:hidden">
-              <div style="background:var(--warning);width:92%;height:100%;border-radius:99px"></div>
+              <div style="background:var(--danger);width:100%;height:100%;border-radius:99px"></div>
             </div>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-top:10px;border-top:1px solid var(--border)">
             <div>
               <div style="font-size:0.65rem;color:var(--muted);margin-bottom:2px">Nº Notas</div>
-              <div style="font-size:0.85rem;font-weight:700">18</div>
+              <div style="font-size:0.85rem;font-weight:700">24</div>
             </div>
             <div>
               <div style="font-size:0.65rem;color:var(--muted);margin-bottom:2px">Ticket Médio</div>
-              <div style="font-size:0.82rem;font-weight:700">R$ 190.853</div>
+              <div style="font-size:0.82rem;font-weight:700">R$ 212.027</div>
             </div>
           </div>
         </div>
@@ -522,11 +492,11 @@
           </div>
           <div>
             <div style="font-size:0.6rem;color:var(--muted)">Δ Pago</div>
-            <div style="font-size:0.72rem;font-weight:700;color:var(--warning)">+R$174k</div>
+            <div style="font-size:0.72rem;font-weight:700;color:var(--danger)">-R$819k</div>
           </div>
           <div>
             <div style="font-size:0.6rem;color:var(--muted)">Δ %rec.</div>
-            <div style="font-size:0.72rem;font-weight:700;color:var(--danger)">-4,1%</div>
+            <div style="font-size:0.72rem;font-weight:700;color:var(--danger)">-21,7%</div>
           </div>
         </div>
       </div>
@@ -540,33 +510,33 @@
         <div style="display:flex;flex-direction:column;gap:9px">
           <div style="display:flex;justify-content:space-between">
             <span style="font-size:0.72rem;color:var(--muted)">Total Faturado</span>
-            <span style="font-size:0.8rem;font-weight:700">R$ 3.793.350</span>
+            <span style="font-size:0.8rem;font-weight:700">R$ 5.446.650</span>
           </div>
           <div style="display:flex;justify-content:space-between">
             <span style="font-size:0.72rem;color:var(--muted)">Total Pago</span>
-            <span style="font-size:0.8rem;font-weight:700;color:var(--warning)">R$ 3.334.100</span>
+            <span style="font-size:0.8rem;font-weight:700;color:var(--warning)">R$ 4.344.450</span>
           </div>
           <div style="display:flex;justify-content:space-between">
             <span style="font-size:0.72rem;color:var(--muted)">Pendente</span>
-            <span style="font-size:0.8rem;font-weight:700;color:var(--warning)">R$ 459.250</span>
+            <span style="font-size:0.8rem;font-weight:700;color:var(--warning)">R$ 1.102.200</span>
           </div>
           <div style="margin-top:2px">
             <div style="display:flex;justify-content:space-between;margin-bottom:5px">
               <span style="font-size:0.7rem;color:var(--muted)">% Recebido</span>
-              <span style="font-size:0.75rem;font-weight:700;color:var(--warning)">87,9%</span>
+              <span style="font-size:0.75rem;font-weight:700;color:var(--warning)">79,8%</span>
             </div>
             <div style="background:rgba(255,255,255,0.07);border-radius:99px;height:7px;overflow:hidden">
-              <div style="background:var(--warning);width:87.9%;height:100%;border-radius:99px"></div>
+              <div style="background:var(--warning);width:79.8%;height:100%;border-radius:99px"></div>
             </div>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-top:10px;border-top:1px solid var(--border)">
             <div>
               <div style="font-size:0.65rem;color:var(--muted);margin-bottom:2px">Nº Notas</div>
-              <div style="font-size:0.85rem;font-weight:700">20</div>
+              <div style="font-size:0.85rem;font-weight:700">26</div>
             </div>
             <div>
               <div style="font-size:0.65rem;color:var(--muted);margin-bottom:2px">Ticket Médio</div>
-              <div style="font-size:0.82rem;font-weight:700">R$ 189.668</div>
+              <div style="font-size:0.82rem;font-weight:700">R$ 209.487</div>
             </div>
           </div>
         </div>
@@ -600,43 +570,45 @@
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap">
           <span style="width:10px;height:10px;border-radius:50%;background:#F97316;display:inline-block;flex-shrink:0"></span>
           <span style="font-size:0.82rem;font-weight:700">Balaguer Repres</span>
-          <span class="diff-pill pos" style="margin-top:0;padding:2px 8px;font-size:0.7rem">⚠ R$ 459.250 pendente</span>
+          <span class="diff-pill pos" style="margin-top:0;padding:2px 8px;font-size:0.7rem">⚠ R$ 1.102.200 pendente</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:6px">
           <div style="background:var(--card2);border:1px solid rgba(34,197,94,0.25);border-radius:10px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center">
             <div style="display:flex;align-items:center;gap:10px">
-              <span class="nota-badge">#19</span>
-              <span style="font-size:0.8rem;color:var(--muted)">jan/26</span>
-              <span style="font-size:0.72rem;color:var(--success);font-weight:600">✔ Pago em 17/03/2026</span>
+              <span class="nota-badge">#21 a #23</span>
+              <span style="font-size:0.8rem;color:var(--muted)">mar-mai/26</span>
+              <span style="font-size:0.72rem;color:var(--success);font-weight:600">✔ Quitadas</span>
             </div>
-            <span style="font-weight:700;color:var(--success);font-size:0.88rem">R$ 183.700,00</span>
+            <span style="font-weight:700;color:var(--success);font-size:0.88rem">R$ 826.650,00</span>
           </div>
           <div style="background:var(--card2);border:1px solid rgba(245,158,11,0.3);border-radius:10px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center">
             <div style="display:flex;align-items:center;gap:10px">
-              <span class="nota-badge">#20</span>
-              <span style="font-size:0.8rem;color:var(--muted)">fev/26</span>
-            </div>
-            <span style="font-weight:700;color:var(--warning);font-size:0.88rem">R$ 183.700,00</span>
-          </div>
-          <div style="background:var(--card2);border:1px solid rgba(245,158,11,0.3);border-radius:10px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center">
-            <div style="display:flex;align-items:center;gap:10px">
-              <span class="nota-badge">#21</span>
-              <span style="font-size:0.8rem;color:var(--muted)">mar/26</span>
+              <span class="nota-badge">#24</span>
+              <span style="font-size:0.8rem;color:var(--muted)">jun/26</span>
             </div>
             <span style="font-weight:700;color:var(--warning);font-size:0.88rem">R$ 275.550,00</span>
           </div>
-        </div>
-      </div>
-
-      <!-- Go Sel -->
-      <div>
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap">
-          <span style="width:10px;height:10px;border-radius:50%;background:#10B981;display:inline-block;flex-shrink:0"></span>
-          <span style="font-size:0.82rem;font-weight:700">Go Sel</span>
-          <span class="diff-pill neg" style="margin-top:0;padding:2px 8px;font-size:0.7rem">↑ Pago a maior R$ 241.250</span>
-        </div>
-        <div style="background:var(--card2);border:1px solid rgba(239,68,68,0.2);border-radius:10px;padding:10px 14px;font-size:0.8rem;color:var(--muted);line-height:1.6">
-          Crédito de <strong style="color:var(--danger)">R$ 241.250,00</strong> a compensar em competências futuras ou estornar.
+          <div style="background:var(--card2);border:1px solid rgba(245,158,11,0.3);border-radius:10px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center">
+            <div style="display:flex;align-items:center;gap:10px">
+              <span class="nota-badge">#25</span>
+              <span style="font-size:0.8rem;color:var(--muted)">jul/26</span>
+            </div>
+            <span style="font-weight:700;color:var(--warning);font-size:0.88rem">R$ 275.550,00</span>
+          </div>
+          <div style="background:var(--card2);border:1px solid rgba(245,158,11,0.3);border-radius:10px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center">
+            <div style="display:flex;align-items:center;gap:10px">
+              <span class="nota-badge">#26</span>
+              <span style="font-size:0.8rem;color:var(--muted)">ago/26</span>
+            </div>
+            <span style="font-weight:700;color:var(--warning);font-size:0.88rem">R$ 275.550,00</span>
+          </div>
+          <div style="background:var(--card2);border:1px solid rgba(245,158,11,0.3);border-radius:10px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center">
+            <div style="display:flex;align-items:center;gap:10px">
+              <span class="nota-badge">#27</span>
+              <span style="font-size:0.8rem;color:var(--muted)">set/26</span>
+            </div>
+            <span style="font-weight:700;color:var(--warning);font-size:0.88rem">R$ 275.550,00</span>
+          </div>
         </div>
       </div>
 
@@ -645,15 +617,19 @@
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap">
           <span style="width:10px;height:10px;border-radius:50%;background:#3B82F6;display:inline-block;flex-shrink:0"></span>
           <span style="font-size:0.82rem;font-weight:700">Bala Consultoria</span>
-          <span class="diff-pill pos" style="margin-top:0;padding:2px 8px;font-size:0.7rem">⚠ R$ 275.550 pendente</span>
+          <span class="diff-pill neg" style="margin-top:0;padding:2px 8px;font-size:0.7rem">↑ Pago a maior R$ 74.450</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:6px">
-          <div style="background:var(--card2);border:1px solid rgba(245,158,11,0.3);border-radius:10px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center">
+          <div style="background:var(--card2);border:1px solid rgba(34,197,94,0.25);border-radius:10px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center">
             <div style="display:flex;align-items:center;gap:10px">
-              <span class="nota-badge">#18</span>
-              <span style="font-size:0.8rem;color:var(--muted)">mar/26</span>
+              <span class="nota-badge">#18 a #24</span>
+              <span style="font-size:0.8rem;color:var(--muted)">mar-set/26</span>
+              <span style="font-size:0.72rem;color:var(--success);font-weight:600">✔ Quitadas</span>
             </div>
-            <span style="font-weight:700;color:var(--warning);font-size:0.88rem">R$ 275.550,00</span>
+            <span style="font-weight:700;color:var(--success);font-size:0.88rem">R$ 1.928.850,00</span>
+          </div>
+          <div style="background:var(--card2);border:1px solid rgba(239,68,68,0.2);border-radius:10px;padding:10px 14px;font-size:0.8rem;color:var(--muted);line-height:1.6">
+            Adiantamentos de R$ 625.550,00 entre 30/07 e 30/09/2026 cobrem as notas de ago e set/26 (R$ 551.100,00) e deixam excedente de <strong style="color:var(--danger)">R$ 74.450,00</strong> a compensar ou devolver para a Click.
           </div>
         </div>
       </div>
@@ -681,6 +657,73 @@
   </table>
 </div>
 
+<!-- ═══════════════════════ CONCILIAÇÃO COM O FINANCEIRO ═══════════════════════ -->
+<div class="chart-card" style="margin-top:16px">
+  <div class="chart-title">Conciliação com o Financeiro — Contas a Pagar</div>
+  <div class="chart-subtitle">Confronto das notas emitidas com os lançamentos do sistema Click Forte Armazenagem · base 07/10/2026</div>
+
+  <div class="kpi-grid-4" style="margin-bottom:18px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+    <div style="background:var(--card2);border-radius:12px;padding:14px;border-left:3px solid #3B82F6">
+      <div style="font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">Bala — pago no sistema</div>
+      <div style="font-size:1rem;font-weight:700;color:#3B82F6">R$ 5.163.100</div>
+      <div style="font-size:0.7rem;color:var(--success);margin-top:4px">✔ 35 lançamentos · confere</div>
+      <div style="font-size:0.68rem;color:var(--muted);margin-top:3px">Último pagto: 30/09/2026 · +R$ 1.176.650 desde 29/07</div>
+    </div>
+    <div style="background:var(--card2);border-radius:12px;padding:14px;border-left:3px solid #F97316">
+      <div style="font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">Balaguer — pago no sistema</div>
+      <div style="font-size:1rem;font-weight:700;color:#F97316">R$ 4.344.450</div>
+      <div style="font-size:0.7rem;color:var(--success);margin-top:4px">✔ 24 lançamentos · confere</div>
+      <div style="font-size:0.68rem;color:var(--muted);margin-top:3px">Último pagto: 28/07/2026 · sem novos pagamentos</div>
+    </div>
+    <div style="background:var(--card2);border-radius:12px;padding:14px;border-left:3px solid var(--success)">
+      <div style="font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">Divergência total</div>
+      <div style="font-size:1rem;font-weight:700;color:var(--success)">R$ 0,00</div>
+      <div style="font-size:0.7rem;color:var(--muted);margin-top:4px">Planilhas × relatório: 100% aderente</div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px">
+
+    <div style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.25);border-radius:10px;padding:12px">
+      <div style="font-size:0.72rem;font-weight:700;color:var(--warning);margin-bottom:5px">⚠ Pagamentos classificados como adiantamento</div>
+      <div style="font-size:0.74rem;color:var(--muted);line-height:1.6">
+        Bala: <strong style="color:#3B82F6">R$ 2.562.550</strong> em 21 lançamentos<br>
+        Balaguer: <strong style="color:var(--success)">nenhum</strong><br>
+        <span style="font-size:0.7rem;font-style:italic">Metade do desembolso da Bala foi pago antes da emissão da nota — exige acompanhamento de baixa contra a NF correspondente.</span>
+      </div>
+    </div>
+
+    <div style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.25);border-radius:10px;padding:12px">
+      <div style="font-size:0.72rem;font-weight:700;color:var(--warning);margin-bottom:5px">⚠ Notas quitadas em parcelas — Bala</div>
+      <div style="font-size:0.74rem;color:var(--muted);line-height:1.6">
+        NF 07: R$ 100.000 (27/02/25) + R$ 83.700 (28/04/25)<br>
+        NF 08: R$ 100.000 (28/04/25) + R$ 83.700 (24/06/25)<br>
+        NF 10: R$ 100.000 (24/06/25) + R$ 83.700 (28/07/25)<br>
+        <span style="font-size:0.7rem;font-style:italic">Pagamento fracionado recorrente no fornecedor Bala.</span>
+      </div>
+    </div>
+
+    <div style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:10px;padding:12px">
+      <div style="font-size:0.72rem;font-weight:700;color:var(--danger);margin-bottom:5px">↑ Bala — pagamentos após 29/07/2026</div>
+      <div style="font-size:0.74rem;color:var(--muted);line-height:1.6">
+        Parcelas 006/007 e 007/007: R$ 275.550 (30/07) + R$ 275.550 (31/08) — quitam jun e jul/26<br>
+        Adiantamentos de R$ 50.000: 30/07 · 04/08 · 24/08 · 31/08 · 23/09 · 24/09 · 30/09<br>
+        Adiantamento de R$ 275.550 em 30/09<br>
+        <span style="font-size:0.7rem;font-style:italic">R$ 625.550 em adiantamentos contra R$ 551.100 das notas de ago e set/26 — excedente de R$ 74.450.</span>
+      </div>
+    </div>
+
+    <div style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:10px;padding:12px">
+      <div style="font-size:0.72rem;font-weight:700;color:var(--danger);margin-bottom:5px">⏳ Lançamentos sem nota vinculada</div>
+      <div style="font-size:0.74rem;color:var(--muted);line-height:1.6">
+        A partir de jul/2025 (Bala) e jan/2026 (Balaguer) o campo <em>Nota Fiscal</em> deixa de ser preenchido no Contas a Pagar.<br>
+        <span style="font-size:0.7rem;font-style:italic">A conciliação nota↔pagamento nesse período foi feita por valor e competência.</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <script>
 // ─────────────────────────────────────────────────────────────
 // DADOS
@@ -689,15 +732,14 @@ const meses = [
   'set/24','out/24','nov/24','dez/24',
   'jan/25','fev/25','mar/25','abr/25','mai/25','jun/25',
   'jul/25','ago/25','set/25','out/25','nov/25','dez/25',
-  'jan/26','fev/26','mar/26'
+  'jan/26','fev/26','mar/26','abr/26','mai/26','jun/26','jul/26','ago/26','set/26'
 ];
 
-const bala = [196000,196000,196000,0,183700,183700,183700,183700,183700,183700,183700,183700,183700,183700,183700,183700,183700,183700,275550];
-const balaguer = [196000,196000,196000,196000,183700,183700,183700,183700,183700,183700,183700,183700,183700,183700,183700,345700,183700,183700,275550];
-const gosel = [116171.52,96500,96500,0,96500,96500,96500,96500,96500,96500,96500,96500,96500,96500,96500,96500,96500,48250,0];
+const bala = [196000,196000,196000,0,183700,183700,183700,183700,183700,183700,183700,183700,183700,183700,183700,183700,183700,183700,275550,275550,275550,275550,275550,275550,275550];
+const balaguer = [196000,196000,196000,196000,183700,183700,183700,183700,183700,183700,183700,183700,183700,183700,183700,345700,183700,183700,275550,275550,275550,275550,275550,275550,275550];
 
-const totFat  = [3435350, 3793350, 1611921.52];
-const totPago = [3159800, 3334100, 1853171.52];
+const totFat  = [5088650, 5446650];
+const totPago = [5163100, 4344450];
 
 // ─────────────────────────────────────────────────────────────
 // HELPERS
@@ -711,8 +753,7 @@ function acum(arr) {
 
 const COLORS = {
   bala:      { solid:'#3B82F6', fade:'rgba(59,130,246,0.18)' },
-  balaguer:  { solid:'#F97316', fade:'rgba(249,115,22,0.18)' },
-  gosel:     { solid:'#10B981', fade:'rgba(16,185,129,0.18)' }
+  balaguer:  { solid:'#F97316', fade:'rgba(249,115,22,0.18)' }
 };
 
 const gridColor  = 'rgba(255,255,255,0.06)';
@@ -732,7 +773,6 @@ new Chart(document.getElementById('barChart'), {
     datasets: [
       { label:'Bala Consultoria', data: bala,     backgroundColor: COLORS.bala.fade,     borderColor: COLORS.bala.solid,     borderWidth:2, borderRadius:4 },
       { label:'Balaguer Repres',  data: balaguer,  backgroundColor: COLORS.balaguer.fade,  borderColor: COLORS.balaguer.solid,  borderWidth:2, borderRadius:4 },
-      { label:'Go Sel',           data: gosel,     backgroundColor: COLORS.gosel.fade,     borderColor: COLORS.gosel.solid,     borderWidth:2, borderRadius:4 },
     ]
   },
   options: {
@@ -766,10 +806,10 @@ new Chart(document.getElementById('barChart'), {
 new Chart(document.getElementById('donutChart'), {
   type: 'doughnut',
   data: {
-    labels: ['Bala Consultoria','Balaguer Repres','Go Sel'],
+    labels: ['Bala Consultoria','Balaguer Repres'],
     datasets: [{
       data: totFat,
-      backgroundColor: [COLORS.bala.solid, COLORS.balaguer.solid, COLORS.gosel.solid],
+      backgroundColor: [COLORS.bala.solid, COLORS.balaguer.solid],
       borderColor: '#1E293B',
       borderWidth: 3,
       hoverOffset: 12
@@ -811,11 +851,6 @@ new Chart(document.getElementById('lineChart'), {
         borderColor: COLORS.balaguer.solid, backgroundColor: COLORS.balaguer.fade,
         borderWidth:2, pointRadius:3, fill:true, tension:0.3
       },
-      {
-        label:'Go Sel', data: acum(gosel),
-        borderColor: COLORS.gosel.solid, backgroundColor: COLORS.gosel.fade,
-        borderWidth:2, pointRadius:3, fill:true, tension:0.3
-      },
     ]
   },
   options: {
@@ -838,10 +873,10 @@ new Chart(document.getElementById('lineChart'), {
 new Chart(document.getElementById('faturadoPagoChart'), {
   type: 'bar',
   data: {
-    labels: ['Bala Consultoria','Balaguer Repres','Go Sel'],
+    labels: ['Bala Consultoria','Balaguer Repres'],
     datasets: [
-      { label:'Total Faturado', data: totFat,  backgroundColor:['rgba(59,130,246,0.5)','rgba(249,115,22,0.5)','rgba(16,185,129,0.5)'], borderColor:['#3B82F6','#F97316','#10B981'], borderWidth:2, borderRadius:6 },
-      { label:'Total Pago',     data: totPago, backgroundColor:['rgba(59,130,246,0.2)','rgba(249,115,22,0.2)','rgba(16,185,129,0.2)'], borderColor:['#3B82F6','#F97316','#10B981'], borderWidth:2, borderRadius:6, borderDash:[4,4] },
+      { label:'Total Faturado', data: totFat,  backgroundColor:['rgba(59,130,246,0.5)','rgba(249,115,22,0.5)'], borderColor:['#3B82F6','#F97316'], borderWidth:2, borderRadius:6 },
+      { label:'Total Pago',     data: totPago, backgroundColor:['rgba(59,130,246,0.2)','rgba(249,115,22,0.2)'], borderColor:['#3B82F6','#F97316'], borderWidth:2, borderRadius:6, borderDash:[4,4] },
     ]
   },
   options: {
@@ -903,11 +938,11 @@ new Chart(document.getElementById('balaVsBalaguerChart'), {
 new Chart(document.getElementById('conciliacaoChart'), {
   type: 'bar',
   data: {
-    labels: ['Bala Consultoria', 'Balaguer Repres', 'Go Sel'],
+    labels: ['Bala Consultoria', 'Balaguer Repres'],
     datasets: [
       {
         label: 'Pago',
-        data: [3159800, 3334100, 1611921.52],
+        data: [5088650, 4344450],
         backgroundColor: 'rgba(34,197,94,0.55)',
         borderColor: '#22C55E',
         borderWidth: 2,
@@ -915,7 +950,7 @@ new Chart(document.getElementById('conciliacaoChart'), {
       },
       {
         label: 'Pendente',
-        data: [275550, 459250, 0],
+        data: [0, 1102200],
         backgroundColor: 'rgba(245,158,11,0.65)',
         borderColor: '#F59E0B',
         borderWidth: 2,
@@ -923,7 +958,7 @@ new Chart(document.getElementById('conciliacaoChart'), {
       },
       {
         label: 'Pago a maior',
-        data: [0, 0, 241250],
+        data: [74450, 0],
         backgroundColor: 'rgba(239,68,68,0.55)',
         borderColor: '#EF4444',
         borderWidth: 2,
@@ -982,6 +1017,12 @@ const notas = [
   { mes:'jan/26', empresa:'Bala Consultoria', nota:'16',  valor:183700,     ok:true },
   { mes:'fev/26', empresa:'Bala Consultoria', nota:'17',  valor:183700,     ok:true },
   { mes:'mar/26', empresa:'Bala Consultoria', nota:'18',  valor:275550,     ok:true },
+  { mes:'abr/26', empresa:'Bala Consultoria', nota:'19',  valor:275550,     ok:true },
+  { mes:'mai/26', empresa:'Bala Consultoria', nota:'20',  valor:275550,     ok:true },
+  { mes:'jun/26', empresa:'Bala Consultoria', nota:'21',  valor:275550,     ok:true },
+  { mes:'jul/26', empresa:'Bala Consultoria', nota:'22',  valor:275550,     ok:true },
+  { mes:'ago/26', empresa:'Bala Consultoria', nota:'23',  valor:275550,     ok:true },
+  { mes:'set/26', empresa:'Bala Consultoria', nota:'24',  valor:275550,     ok:true },
   // BALAGUER
   { mes:'set/24', empresa:'Balaguer Repres', nota:'1',    valor:null,       cancelada:true },
   { mes:'set/24', empresa:'Balaguer Repres', nota:'2',    valor:196000,     ok:true },
@@ -1003,33 +1044,17 @@ const notas = [
   { mes:'jan/26', empresa:'Balaguer Repres', nota:'19',   valor:183700,     ok:true },
   { mes:'fev/26', empresa:'Balaguer Repres', nota:'20',   valor:183700,     ok:true },
   { mes:'mar/26', empresa:'Balaguer Repres', nota:'21',   valor:275550,     ok:true },
-  // GO SEL
-  { mes:'set/24', empresa:'Go Sel', nota:'1',  valor:116171.52, ok:true },
-  { mes:'out/24', empresa:'Go Sel', nota:'2',  valor:96500,     ok:true },
-  { mes:'nov/24', empresa:'Go Sel', nota:'3',  valor:96500,     ok:true },
-  { mes:'dez/24', empresa:'Go Sel', nota:'X',  valor:null,      smov:true },
-  { mes:'jan/25', empresa:'Go Sel', nota:'4',  valor:null,      cancelada:true },
-  { mes:'jan/25', empresa:'Go Sel', nota:'5',  valor:96500,     ok:true },
-  { mes:'fev/25', empresa:'Go Sel', nota:'6',  valor:96500,     ok:true },
-  { mes:'mar/25', empresa:'Go Sel', nota:'7',  valor:96500,     ok:true },
-  { mes:'abr/25', empresa:'Go Sel', nota:'8',  valor:96500,     ok:true },
-  { mes:'mai/25', empresa:'Go Sel', nota:'9',  valor:96500,     ok:true },
-  { mes:'jun/25', empresa:'Go Sel', nota:'10', valor:96500,     ok:true },
-  { mes:'jul/25', empresa:'Go Sel', nota:'11', valor:96500,     ok:true },
-  { mes:'ago/25', empresa:'Go Sel', nota:'12', valor:96500,     ok:true },
-  { mes:'set/25', empresa:'Go Sel', nota:'13', valor:96500,     ok:true },
-  { mes:'out/25', empresa:'Go Sel', nota:'14', valor:96500,     ok:true },
-  { mes:'nov/25', empresa:'Go Sel', nota:'15', valor:96500,     ok:true },
-  { mes:'dez/25', empresa:'Go Sel', nota:'16', valor:96500,     ok:true },
-  { mes:'jan/26', empresa:'Go Sel', nota:'17', valor:96500,     ok:true },
-  { mes:'fev/26', empresa:'Go Sel', nota:'18', valor:48250,     ok:true },
-  { mes:'mar/26', empresa:'Go Sel', nota:'X',  valor:null,      smov:true },
+  { mes:'abr/26', empresa:'Balaguer Repres', nota:'22',   valor:275550,     ok:true },
+  { mes:'mai/26', empresa:'Balaguer Repres', nota:'23',   valor:275550,     ok:true },
+  { mes:'jun/26', empresa:'Balaguer Repres', nota:'24',   valor:275550,     ok:true },
+  { mes:'jul/26', empresa:'Balaguer Repres', nota:'25',   valor:275550,     ok:true },
+  { mes:'ago/26', empresa:'Balaguer Repres', nota:'26',   valor:275550,     ok:true },
+  { mes:'set/26', empresa:'Balaguer Repres', nota:'27',   valor:275550,     ok:true },
 ];
 
 const colorMap = {
   'Bala Consultoria': '#3B82F6',
-  'Balaguer Repres':  '#F97316',
-  'Go Sel':           '#10B981'
+  'Balaguer Repres':  '#F97316'
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -1041,11 +1066,10 @@ function exportarExcel() {
   // ── ABA 1: RESUMO ──
   const resumoData = [
     ['Consultoria', 'Representante', 'Total Faturado (R$)', 'Total Pago (R$)', 'Diferença (R$)', 'Status'],
-    ['Bala Consultoria',  'Bruno Balaguer',   3435350,    3159800,      275550,     'Pendente'],
-    ['Balaguer Repres',   'Felipe Balguer',   3793350,    3334100,      459250,     'Pendente'],
-    ['Go Sel',            'Anderson Salemme', 1611921.52, 1853171.52,  -241250,    'Pago a maior'],
+    ['Bala Consultoria',  'Bruno Balaguer',   5088650,    5163100,      -74450,     'Devolver para Click'],
+    ['Balaguer Repres',   'Felipe Balguer',   5446650,    4344450,     1102200,     'Pagar Consultoria'],
     [],
-    ['TOTAL GERAL', '', 8840621.52, 8347071.52, 493550, ''],
+    ['TOTAL GERAL', '', 10535300, 9507550, 1027750, ''],
   ];
   const wsResumo = XLSX.utils.aoa_to_sheet(resumoData);
   wsResumo['!cols'] = [{wch:22},{wch:20},{wch:22},{wch:20},{wch:18},{wch:16}];
@@ -1053,7 +1077,7 @@ function exportarExcel() {
 
   // ── ABA 2: DETALHAMENTO ──
   const detHeader = ['Mês', 'Consultoria', 'Representante', 'Nº Nota', 'Valor (R$)', 'Status'];
-  const repMap = { 'Bala Consultoria':'Bruno Balaguer', 'Balaguer Repres':'Felipe Balguer', 'Go Sel':'Anderson Salemme' };
+  const repMap = { 'Bala Consultoria':'Bruno Balaguer', 'Balaguer Repres':'Felipe Balguer' };
   const detRows = notas.map(n => [
     n.mes,
     n.empresa,
@@ -1067,17 +1091,36 @@ function exportarExcel() {
   XLSX.utils.book_append_sheet(wb, wsDetalhe, 'Detalhamento');
 
   // ── ABA 3: FATURAMENTO MENSAL ──
-  const mensalHeader = ['Mês', 'Bala Consultoria (R$)', 'Balaguer Repres (R$)', 'Go Sel (R$)', 'Total Mês (R$)'];
+  const mensalHeader = ['Mês', 'Bala Consultoria (R$)', 'Balaguer Repres (R$)', 'Total Mês (R$)'];
   const mensalRows = meses.map((m, i) => [
     m,
     bala[i] || 0,
     balaguer[i] || 0,
-    gosel[i] || 0,
-    (bala[i] || 0) + (balaguer[i] || 0) + (gosel[i] || 0)
+    (bala[i] || 0) + (balaguer[i] || 0)
   ]);
   const wsMensal = XLSX.utils.aoa_to_sheet([mensalHeader, ...mensalRows]);
-  wsMensal['!cols'] = [{wch:10},{wch:24},{wch:24},{wch:18},{wch:18}];
+  wsMensal['!cols'] = [{wch:10},{wch:24},{wch:24},{wch:18}];
   XLSX.utils.book_append_sheet(wb, wsMensal, 'Faturamento Mensal');
+
+  // ── ABA 4: CONCILIAÇÃO COM O FINANCEIRO ──
+  const conc = [
+    ['Conciliação Notas Emitidas × Contas a Pagar (base 07/10/2026)'],
+    [],
+    ['Consultoria','Faturado (R$)','Pago no sistema (R$)','Divergência (R$)','Nº lançamentos','Último pagamento','Adiantamentos (R$)'],
+    ['Bala Consultoria', 5088650,    5163100,     0, 35, '30/09/2026', 2562550],
+    ['Balaguer Repres',  5446650,    4344450,     0, 24, '28/07/2026', 0],
+    [],
+    ['Observações'],
+    ['Bala concentra grande parte do desembolso em lançamentos de adiantamento, pagos antes da emissão da NF.'],
+    ['Bala — notas 07, 08 e 10 quitadas em duas parcelas cada (R$ 100.000 + R$ 83.700).'],
+    ['Bala — após 29/07/2026: parcelas 006/007 e 007/007 (2 × R$ 275.550) quitam jun e jul/26; mais R$ 625.550 em adiantamentos (7 × R$ 50.000 + R$ 275.550 em 30/09/2026) contra R$ 551.100 das notas de ago e set/26 — excedente de R$ 74.450.'],
+    ['Balaguer — sem novos pagamentos desde 28/07/2026; notas 24 a 27, de jun a set/26 (R$ 1.102.200), seguem em aberto.'],
+    ['Balaguer — NF 18 (R$ 162.000, paga em 17/12/2025) é acerto do aluguel da Madeira Express devido por Felipe P. Física; não é retirada de consultoria.'],
+    ['Campo Nota Fiscal deixa de ser preenchido no Contas a Pagar a partir de jul/2025 (Bala) e jan/2026 (Balaguer).'],
+  ];
+  const wsConc = XLSX.utils.aoa_to_sheet(conc);
+  wsConc['!cols'] = [{wch:24},{wch:18},{wch:22},{wch:18},{wch:16},{wch:18},{wch:20}];
+  XLSX.utils.book_append_sheet(wb, wsConc, 'Conciliação');
 
   XLSX.writeFile(wb, 'Relatorio_Faturamento_Consultorias.xlsx');
 }
